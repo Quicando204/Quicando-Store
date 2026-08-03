@@ -1,4 +1,4 @@
-const botoes = document.querySelectorAll("#botao")
+const botoes = document.querySelectorAll(".botao")
 const carrinhoContagem = document.querySelector("#contador")
 
 const produtos = [{id: 1,nome: "Teclado", preco: 50}, {id: 2, nome: "Mouse", preco: 20}, {id: 3, nome: "Monitor", preco: 300}, {id: 4, nome: "Notebook", preco: 1200}]
@@ -11,10 +11,10 @@ botoes.forEach((botao) => {
         const id = Number(botao.dataset.id)
 
         contador ++
-        carrinho.innerHTML = contador
+        carrinhoContagem.innerHTML = contador
 
-        const idEncontrado = id.find((id) => {
-            return id === produtos.id 
+        const idEncontrado = produtos.find((produto) => {
+            return produto.id === id 
         })
 
         carrinho.push(idEncontrado)
@@ -22,10 +22,10 @@ botoes.forEach((botao) => {
         function mostrarProduto (id) {
             const listaDoCarrinho = document.querySelector("#lista-carrinho")
 
-            carrinho.innerHTML = ''
+            listaDoCarrinho.innerHTML = ''
 
             carrinho.forEach((produto) => {
-                carrinho.innerHTML += `<h3> ${produto.nome} </h3><p> ${produto.preco}€</p>
+                listaDoCarrinho.innerHTML += `<h3> ${produto.nome} </h3><p> ${produto.preco}€</p>
                 <button>Remover</button>`
             })
 
@@ -34,12 +34,14 @@ botoes.forEach((botao) => {
         function mostrarValorTotalDoCarrinho(){
             const valorTotal = document.querySelector("#total")
 
-            const somaTotal = carrinho.reduce((acc,curr) => acc + curr.preco )
+            const somaTotal = carrinho.reduce((acc,curr) => acc + curr.preco,0 )
 
             valorTotal.innerHTML = `${somaTotal}€ `
         }
 
-       
+        
+
+     
 
         mostrarProduto(id)
         mostrarValorTotalDoCarrinho()
