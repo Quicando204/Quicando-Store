@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Quicando Store</h1>
+
+    <div class="carrinho">
+        🛒 Carrinho:
+        <span id="contador">0</span>
+    </div>
+</header>
+
+
+<main>
+
+    <section class="produtos">
+
+        <h2>Produtos</h2>
+
+        <div class="lista-produtos">
+
+            <div class="produto">
+                <h3>Teclado</h3>
+                <p>Preço: 50€</p>
+                <button class="botao" data-id = "1">Adicionar</button>
+            </div>
+
+
+            <div class="produto">
+                <h3>Mouse</h3>
+                <p>Preço: 20€</p>
+                <button class="botao" data-id="2">Adicionar</button>
+            </div>
+
+
+            <div class="produto">
+                <h3>Monitor</h3>
+                <p>Preço: 300€</p>
+                <button class="botao" data-id="3">Adicionar</button>
+            </div>
+
+
+            <div class="produto">
+                <h3>Notebook</h3>
+                <p>Preço: 1200€</p>
+                <button class="botao" data-id="4">Adicionar</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="carrinho-area">
+
+        <h2>Seu Carrinho</h2>
+
+        <div id="lista-carrinho">
+            <!-- Produtos adicionados aparecem aqui -->
+        </div>
+
+
+        <h3 style="margin-top: 10px;">
+            Total:
+            <span id="total">0€</span>
+        </h3>
+
+
+        <button class="finalizar" >
+            Finalizar Compra
+        </button >
+
+    </section>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
