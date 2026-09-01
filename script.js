@@ -5,6 +5,7 @@ const produtos = [{id: 1,nome: "Teclado", preco: 50}, {id: 2, nome: "Mouse", pre
 
 let carrinho = []
 let contador = 0
+
 botoes.forEach((botao) => {
     botao.addEventListener("click", () => {
 
@@ -39,9 +40,7 @@ botoes.forEach((botao) => {
             valorTotal.innerHTML = `${somaTotal}€ `
         }
 
-        
-
-     
+       
 
         mostrarProduto(id)
         mostrarValorTotalDoCarrinho()
